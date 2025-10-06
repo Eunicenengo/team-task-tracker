@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Team Task Tracker</title>
+  <link rel="stylesheet" href="teamtasker.css"/>
+</head>
+<body>
+  <header>
+    <h1>Team Task Tracker</h1>
+  </header>
+
+  <main class="container">
+    <aside class="team-panel">
+      <h2>Team Members</h2>
+      <div id="teamList" class="team-list"></div>
+      <hr />
+      <h3>Add Team Member</h3>
+      <form id="addMemberForm" class="small-form">
+        <input id="memberName" placeholder="Name" required />
+        <input id="memberEmail" type="email" placeholder="Email" required />
+        <input id="memberRole" placeholder="Role" required />
+        <button type="submit">Add Member</button>
+      </form>
+    </aside>
+
+    <section class="task-panel">
+      <div class="controls">
+        <form id="addTaskForm" class="task-form">
+          <input id="taskDesc" placeholder="New task description" required />
+          <select id="taskAssignee" required>
+          </select>
+          <button type="submit">Add Task</button>
+        </form>
+
+        <div class="filters">
+          <label for="filterSelect">Filter by:</label>
+          <select id="filterSelect">
+            <option value="all">All</option>
+            <option value="code">Code</option>
+            <option value="test">test</option>
+            <option value="deploy">deploy</option>
+          </select>
+          <button id="clearCompleted">Clear Completed</button>
+        </div>
+      </div>
+
+      <ul id="taskList" class="task-list"></ul>
+    </section>
+  </main>
+  <footer>
+    The team tasker project.
+  </footer>
+<script src="teamtasker.js"></script>
+</body>
+</html>
